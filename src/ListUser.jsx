@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 export default class ListUser extends Component {
-
   render() {
     if(Array.isArray(this.props.userData)) {
     return (
@@ -9,8 +8,8 @@ export default class ListUser extends Component {
             <h2>User Detail Information</h2>
             {this.props.userData.map(user => {
                 return (
-                    <div className='user-item'>
-                        <div className='user-avatar' key={user?.node_id}>
+                    <div className='user-item' key={user?.node_id}>
+                        <div className='user-avatar' >
                             <img src={user?.avatar_url}/>
                         </div>
                         <div className='user-info'>
@@ -34,8 +33,8 @@ export default class ListUser extends Component {
         return (
         <div className="list-user">
             <h2>User Detail Information</h2>
-            <div className='user-item'>
-                <div className='user-avatar' key={this.props.userData?.node_id}>
+            <div className='user-item' key={this.props.userData?.node_id}>
+                <div className='user-avatar' >
                     <img src={this.props.userData?.avatar_url}/>
                 </div>
                 <div className='user-info'>
