@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import ListUser from './ListUser';
+import SearchUser from './SearchUser';
 
 function App() {
   const [userName, setUserName] = useState('')
@@ -10,7 +12,7 @@ function App() {
     async function getUserInfo() {
       try {
         const response = await getUserData(userName)
-        console.log(response)
+        setData(response.data)
       } catch(err) {
         console.log(err)
       }
@@ -28,31 +30,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className='search-user'>
-        <span>Name: </span>
-        <input type='text' placeholder='Input name...' onChange={handleInputUsername}></input>
-      </div>
-
-      <div className="list-user">
-        <h2>User Detail Information</h2>
-        <div className='user-item'>
-          <div className='user-avatar'>
-            <img src=''/>
-          </div>
-          <div className='user-info'>
-            <div className='user-info-item'>
-              <p>Role: </p>
-              <p>Email: </p>
-            </div>
-            <div className='user-info-item'>
-              <p>Company: </p>
-            </div>
-            <div className='user-info-item'>
-              <p>Number of followers: </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SearchUser 
+        handleInputUsername = {handleInputUsername}
+      />
+      <ListUser 
+        userData = {data}
+      />
     </div>
   );
 }

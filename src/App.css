@@ -43,10 +43,9 @@
 
 .App .list-user .user-item {
   width: 25%;
-  margin: 0 auto;
+  margin: 10px auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   border: 1px solid #ccc;
 }
 
@@ -56,7 +55,8 @@
 }
 
 .App .list-user .user-item .user-avatar img{
-  
+  width: 100%;
+  border-radius: 50%
 }
 
 .App .list-user .user-item .user-info {
