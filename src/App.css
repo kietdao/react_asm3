@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +35,36 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App .list-user {
+
+}
+
+.App .list-user .user-item {
+  width: 25%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #ccc;
+}
+
+.App .list-user .user-item .user-avatar {
+  width: 30%;
+  padding: 4px;
+}
+
+.App .list-user .user-item .user-avatar img{
+  
+}
+
+.App .list-user .user-item .user-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.App .list-user .user-item .user-info .user-info-item {
+  width: 50%;
 }
