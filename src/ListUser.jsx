@@ -29,7 +29,7 @@ export default class ListUser extends Component {
             })}
         </div>
     )
-    } else {
+    } else if(typeof this.props.userData === 'object') {
         return (
         <div className="list-user">
             <h2>User Detail Information</h2>
